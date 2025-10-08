@@ -1,5 +1,3 @@
-
-
 ## Stamp Collection (Rutherford Scattering)
 
 ### Overview
@@ -29,14 +27,14 @@ The script defines fundamental constants such as the mass of the proton, alpha p
 #### Initial Conditions
 The center-of-mass (CoM) reference frame is established using:
 
-- `initial\_conditions\_com\_rest()` to transform particle velocities.
-- `initial\_values\_cartesian\_com()` to generate initial positions and velocities for the simulation.
+- `initial.conditions.com.rest()` to transform particle velocities.
+- `initial.values.cartesian.com()` to generate initial positions and velocities for the simulation.
 
 #### Numerical Integration
 The code uses a custom implementation of the fourth-order Runge–Kutta method **nrk4\_4** and an adaptive step-size control routine (\texttt{runrk4\_adaptive}) that adjusts the time step based on accuracy comparisons between half and full steps.
 
 #### Scattering Angle and Cross Section
-Functions such as `rk4\_theta\_adaptive()` and `scattering\_cross\_section()` compute:
+Functions such as `rk4.theta.adaptive()` and `scattering.cross.section()` compute:
 - The scattering angle for each impact parameter.
 - The differential cross section, both numerically and theoretically, using the Rutherford formula.
 
@@ -46,7 +44,7 @@ A Monte Carlo sampling of random impact parameters generates scattering angle di
 ### Usage Instructions
 To run the program, execute:
 ```bash
-python project2_202319705_ATST.py
+python rutherford_scattering.py
 ```
 
 Upon running, you will be prompted to input a mode number:
