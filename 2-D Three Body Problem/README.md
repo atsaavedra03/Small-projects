@@ -23,7 +23,7 @@ The recommended frame interval is 0.01<br>
 If the axes extend to values above 10 and bodies can't be observed, the behavior probably has the planets fly away from scattering.<br>
 In that case reducing the lenght of the gif will allow to observe the behavior befor scattering.<br>
 <br>
-# Example Input Mode 1:<br>
+### Example Input Mode 1:<br>
 -0.97000436 0.24308753 0.4662036850 0.4323657300<br>
 0.0 0.0 -0.93240737 -0.86473146<br>
 0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
@@ -35,7 +35,7 @@ In that case reducing the lenght of the gif will allow to observe the behavior b
 6.3259<br>
 8.0<br>
 <br>
-# Example Input Mode 2:<br>
+### Example Input Mode 2:<br>
 -0.97000436 0.24308753 0.4662036850 0.4323657300<br>
 0.0 0.0 -0.93240737 -0.86473146<br>
 0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
