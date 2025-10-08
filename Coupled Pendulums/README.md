@@ -15,6 +15,15 @@ It supports two operation modes:
    Computes motion values (`θ₁`, `ω₁`, `θ₂`, `ω₂`) at specified time points.
 2. **Mode 2 – Animation:**  
    Generates and saves an animated visualization (`.gif`) of the coupled pendulums.
+---
+## Input
+
+Line 1 of input should detail m1, l1, m2, l2, and deltax spaced by a space.
+Line 2 details the initial position x0 and y0 spaced by a space.
+Line 3 determines the mode.
+For mode 1, the next line determines the number of time points to check, and then each time is given line by line.
+For mode 2, one line details the time to be modeled and the frame interval, separated by a space.
+Input.txt has examples of both modes.
 
 ---
 ## Dependencies
