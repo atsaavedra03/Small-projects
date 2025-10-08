@@ -7,7 +7,7 @@ So 0.0 0.1 0.5 0.8 makes the initial conditions of planet 1: (x = 0.0, y = 0.1, 
 The initial positions should be kept inside the |x|<1 range for optimal output. <br> 
 <br>
 Mode 1 outputs the different positions and velocities of each planet in the same format as the input. <br>
-If mode 1 is selected the system will ask for how many different times will be checked and then will <br>
+If mode 1 is selected the system will ask for how the amount of times that will be checked and then will <br>
 ask for that many inputs. <br>
 So to check at time 0.0, 0.1 and 0.5 the input should look like this: <br>
 3 <br>
