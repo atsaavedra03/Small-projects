@@ -1,43 +1,99 @@
-## Three-body problem simulator using Range Kutta 4
-The three_body.py Python file simulates the three-body problem in 2D by integrating the differential equations numerically using RK4. <br>
-The code uses pillower to save the animation so it is required to run succesfully. Other than that numpy and matplotlib were used. <br>
-When running the code it reads user input for initial conditions (3 lines) and simulation mode (1 line) <br>
-Each line represents the initial x position and y position of the respective object. <br>
-So 0.0 0.1 0.5 0.8 makes the initial conditions of planet 1: (x = 0.0, y = 0.1, vx = 0.5, vy = 0.8). <br>
-The initial positions should be kept inside the |x|<1 range for optimal output. <br> 
-<br>
-Mode 1 outputs the different positions and velocities of each planet in the same format as the input. <br>
-If mode 1 is selected the system will ask for how the amount of times that will be checked and then will <br>
-ask for that many inputs. <br>
-So to check at time 0.0, 0.1 and 0.5 the input should look like this: <br>
-3 <br>
-0.0 <br>
-0.1 <br>
-0.5 <br>
-The minimum time resolution for mode 1 is 0.00001s.<br>
-<br>
-Mode 2 will output a gif of the three body behavior for a required time and frame interval. <br>
-So after inputing 2 the system will ask for both values in the same line, as such:<br>
-10 0.01<br>
-The recommended frame interval is 0.01<br>
-If the axes extend to values above 10 and bodies can't be observed, the behavior probably has the planets fly away from scattering.<br>
-In that case reducing the lenght of the gif will allow to observe the behavior befor scattering.<br>
-<br>
-### Example Input Mode 1:<br>
--0.97000436 0.24308753 0.4662036850 0.4323657300<br>
-0.0 0.0 -0.93240737 -0.86473146<br>
-0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
-1<br>
-5<br>
-0.0<br>
-1.0<br>
-2.0<br>
-6.3259<br>
-8.0<br>
-<br>
-### Example Input Mode 2:<br>
--0.97000436 0.24308753 0.4662036850 0.4323657300<br>
-0.0 0.0 -0.93240737 -0.86473146<br>
-0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
-2<br>
-10.0 0.01<br>
+## Three-body Problem Simulator using Runge–Kutta 4
+
+This program (`three_body.py`) simulates the **three-body problem in 2D** by numerically integrating the system of differential equations using the **fourth-order Runge–Kutta (RK4)** method.  
+
+The code requires the following Python libraries:
+- **Pillow** – to save the resulting animation (`.gif` file)
+- **NumPy** – for numerical computation
+- **Matplotlib** – for plotting and animation  
+
+---
+
+### 🧩 Input Overview
+
+When running the code, the user must provide:
+1. **Initial conditions** for each of the three bodies (3 lines total)  
+2. A **simulation mode** (1 line)
+
+Each line of initial conditions must include:
+x y vx vy
+For example:
+0.0 0.1 0.5 0.8
+sets the initial conditions of planet 1 as  
+*(x = 0.0, y = 0.1, vx = 0.5, vy = 0.8)*.  
+
+To ensure stable output, it is recommended that initial positions stay within the range **|x| < 1**.
+
+---
+
+### Mode 1 — Data Output
+
+In this mode, the code outputs the **positions and velocities** of each body at specified times.
+
+After selecting mode 1:
+1
+the system will ask:
+1. The **number of times** to check  
+2. Each **time value** to be checked (one per line)
+
+For example:
+3
+0.0
+0.1
+0.5
+will output the positions and velocities at *t = 0.0, 0.1,* and *0.5 s*.  
+The minimum time resolution for mode 1 is **0.00001 s**.
+
+---
+
+### Mode 2 — Animation Output
+
+Mode 2 generates an animated `.gif` showing the **orbital motion** of the three bodies.
+
+After selecting mode 2:
+2
+the system will ask for:
+simulation_time frame_interval
+For example:
+10 0.01
+runs the simulation for **10 seconds** with a **frame interval of 0.01 s**.  
+A frame interval of 0.01 is generally recommended for smooth playback.  
+
+If the axes extend beyond ±10 and the planets leave the visible frame, the system likely diverged due to scattering.  
+In that case, try reducing the total simulation time to observe earlier behavior before scattering occurs.
+
+---
+
+### Example Input — Mode 1
+-0.97000436 0.24308753 0.4662036850 0.4323657300
+0.0 0.0 -0.93240737 -0.86473146
+0.97000436 -0.24308753 0.4662036850 0.4323657300
+1
+5
+0.0
+1.0
+2.0
+6.3259
+8.0
+
+---
+
+### Example Input — Mode 2
+-0.97000436 0.24308753 0.4662036850 0.4323657300
+0.0 0.0 -0.93240737 -0.86473146
+0.97000436 -0.24308753 0.4662036850 0.4323657300
+2
+10.0 0.01
+
+
+---
+
+### Notes
+- Make sure `Pillow` is installed; otherwise, the animation cannot be saved.
+- If using very small time steps or long simulations, computation time will increase.
+- The simulation is purely Newtonian and does not include relativistic effects.
+
+---
+
+
+
