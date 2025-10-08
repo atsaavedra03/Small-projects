@@ -25,6 +25,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
 from matplotlib.lines import Line2D
+import matplotlib.patches as patch
 
 # Read user input for initial conditions (3 lines) and simulation mode (1 line)
 line1 = input()
@@ -308,9 +309,9 @@ elif mode == 2:
 
     planetsize = 0.04
 
-    #planet1 = ax.add_patch(plt.Circle((x1,y1),planetsize, fc = 'b', zorder = 3, label='Mass 1'))
-    #planet2 = ax.add_patch(plt.Circle((x2,y2),planetsize, fc = 'r', zorder = 3, label='Mass 2'))
-    #planet3 = ax.add_patch(plt.Circle((x3,y3),planetsize, fc = 'g', zorder = 3, label='Mass 3'))
+    planet1 = ax.add_patch(patch.Circle((x1,y1),planetsize, fc = 'b', zorder = 3, label='Mass 1'))
+    planet2 = ax.add_patch(patch.Circle((x2,y2),planetsize, fc = 'r', zorder = 3, label='Mass 2'))
+    planet3 = ax.add_patch(patch.Circle((x3,y3),planetsize, fc = 'g', zorder = 3, label='Mass 3'))
     
     def animate(i):
         x1 = x1_values[i*sd]
@@ -321,12 +322,12 @@ elif mode == 2:
         y3 = y3_values[i*sd]
 
         
-        #planet1.set_center((x1,y1))
-        #ax.add_patch(plt.Circle((x1,y1),0.005, fc = 'b', zorder = 1))
-        #planet2.set_center((x2,y2))
-        #ax.add_patch(plt.Circle((x2,y2),0.005, fc = 'r', zorder = 1))
-        #planet3.set_center((x3,y3))
-        #ax.add_patch(plt.Circle((x3,y3),0.005, fc = 'g', zorder = 1))
+        planet1.set(center = (x1,y1))
+        ax.add_patch(patch.Circle((x1,y1),0.005, fc = 'b', zorder = 1))
+        planet2.set(center = (x2,y2))
+        ax.add_patch(patch.Circle((x2,y2),0.005, fc = 'r', zorder = 1))
+        planet3.set(center = (x3,y3))
+        ax.add_patch(patch.Circle((x3,y3),0.005, fc = 'g', zorder = 1))
         
         time.set_text('t = '+ d3_maker(str(round(t_values[i*sd],3))))
     
