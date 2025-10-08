@@ -30,7 +30,7 @@ Make sure the following Python libraries are installed:
 pip install numpy matplotlib pandas scipy pillow
 ```
 ## Files Description
-symmetric_top.py
+### `symmetric_top.py`
 
 A full simulation and visualization script that:
 
@@ -75,18 +75,18 @@ An interactive notebook that imports the functions from `symmetric_top.py` and a
 
 ---
 
-## 📥 Input Format
+## Input Format
 
 The `input.txt` file should contain one set of initial conditions per line:
-x0 p1
-Example:
-0.8 1.95
-1.0 2.10
+x0 p1 <br>
+Example:<br>
+0.8 1.95<br>
+1.0 2.10<br>
 0.5 1.80
 
 ---
 
-## 📤 Output Files
+## Output Files
 
 - `output.txt` — Contains `x` and `y` values at t = 5 s for each input set  
 - `gif N.gif` — Animated trajectory for each simulation (`N` = input line number)  
@@ -94,13 +94,14 @@ Example:
 
 ---
 
-## 🎞️ Example Usage
+## Example Usage
 
 ### Run from Terminal
 
 ```bash
-```
 python symmetric_top.py
+```
+
 
 ## Run Interactively
 
