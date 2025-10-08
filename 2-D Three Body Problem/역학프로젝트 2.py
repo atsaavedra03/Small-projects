@@ -26,8 +26,27 @@ import numpy as np
 import matplotlib.animation as animation
 from matplotlib.lines import Line2D
 import matplotlib.patches as patch
+"""
+Read user input for initial conditions (3 lines) and simulation mode (1 line)
+Each line represent the initial x position and y position of the respective object.
+So 0.0 0.1 0.5 0.8 makes the initial conditions of planet 1: (x = 0.0, y = 0.1, vx = 0.5, vy = 0.8).
+The initial positions should be kept inside the |x|<1 range for optimal output.
+Mode 1 outputs the different positions and velocities of each planet in the same format as the input.
+If mode 1 is selected the system will ask for how many different times will be checked and then will 
+ask for that many inputs.
+So to check at time 0.0, 0.1 and 0.5 the input should look like this:
+3
+0.0
+0.1
+0.5
+The minimum time resolution for mode 1 is 0.00001s.
 
-# Read user input for initial conditions (3 lines) and simulation mode (1 line)
+Mode 2 will output a gif of the three body behavior for a required time and frame interval.
+So after inputing 2 the system will ask for both values in the same line, as such:
+10 0.01
+The recommended frame interval is 0.01
+"""
+
 line1 = input()
 line2 = input()
 line3 = input()
@@ -251,7 +270,7 @@ while t <= max_t:
     vx3_values.append(vx3)
     vy3_values.append(vy3)
 
-
+# Helper function to help format outputs for mode 1
 def d3_maker(str):
     if str[0] == '-':
         obj = 6
@@ -263,7 +282,7 @@ def d3_maker(str):
             str  = str + '0'
     return str
 
-
+# Prints outputs for mode 1
 if mode == 1:
     keys = list(t_list.keys())
     l1 = [x1_values,y1_values,vx1_values,vy1_values]
