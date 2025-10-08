@@ -9,7 +9,7 @@ The code requires the following Python libraries:
 
 ---
 
-### 🧩 Input Overview
+### Input Overview
 
 When running the code, the user must provide:
 1. **Initial conditions** for each of the three bodies (3 lines total)  
