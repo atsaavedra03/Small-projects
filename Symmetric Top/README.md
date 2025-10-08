@@ -78,10 +78,10 @@ An interactive notebook that imports the functions from `symmetric_top.py` and a
 ## Input Format
 
 The `input.txt` file should contain one set of initial conditions per line:
-x0 p1
-Example:
-0.8 1.95
-1.0 2.10
+x0 p1 <br>
+Example:<br>
+0.8 1.95<br>
+1.0 2.10<br>
 0.5 1.80
 
 ---
