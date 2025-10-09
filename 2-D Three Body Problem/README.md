@@ -30,7 +30,7 @@ To ensure stable output, it is recommended that initial positions stay within th
 
 In this mode, the code outputs the **positions and velocities** of each body at specified times.
 
-After selecting mode 1(input 1),
+After selecting mode 1 (input 1),
 the system will ask:
 1. The **number of times** to check  
 2. Each **time value** to be checked (one per line)
@@ -49,9 +49,7 @@ The minimum time resolution for mode 1 is **0.00001 s**.<br>
 
 Mode 2 generates an animated `.gif` showing the **orbital motion** of the three bodies.<br>
 
-After selecting mode 2 (input 2),
-the system will ask for:<br>
-simulation_time frame_interval<br>
+After selecting mode 2 (input 2), the system will ask for: simulation_time frame_interval. <br>
 For example:<br>
 10 0.01<br>
 runs the simulation for **10 seconds** with a **frame interval of 0.01 s**. <br> 
