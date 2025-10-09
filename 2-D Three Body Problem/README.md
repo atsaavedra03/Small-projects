@@ -30,34 +30,34 @@ To ensure stable output, it is recommended that initial positions stay within th
 
 In this mode, the code outputs the **positions and velocities** of each body at specified times.
 
-After selecting mode 1:
-1
-the system will ask:
-1. The **number of times** to check  
-2. Each **time value** to be checked (one per line)
+After selecting mode 1: <br>
+1<br>
+the system will ask:<br>
+1. The **number of times** to check  <br>
+2. Each **time value** to be checked (one per line)<br>
 
-For example:
-3
-0.0
-0.1
-0.5
-will output the positions and velocities at *t = 0.0, 0.1,* and *0.5 s*.  
-The minimum time resolution for mode 1 is **0.00001 s**.
+For example:<br>
+3<br>
+0.0<br>
+0.1<br>
+0.5<br>
+will output the positions and velocities at *t = 0.0, 0.1,* and *0.5 s*. <br> 
+The minimum time resolution for mode 1 is **0.00001 s**.<br>
 
 ---
 
 ### Mode 2 — Animation Output
 
-Mode 2 generates an animated `.gif` showing the **orbital motion** of the three bodies.
+Mode 2 generates an animated `.gif` showing the **orbital motion** of the three bodies.<br>
 
-After selecting mode 2:
-2
-the system will ask for:
-simulation_time frame_interval
-For example:
-10 0.01
-runs the simulation for **10 seconds** with a **frame interval of 0.01 s**.  
-A frame interval of 0.01 is generally recommended for smooth playback.  
+After selecting mode 2:<br>
+2<br>
+the system will ask for:<br>
+simulation_time frame_interval<br>
+For example:<br>
+10 0.01<br>
+runs the simulation for **10 seconds** with a **frame interval of 0.01 s**. <br> 
+A frame interval of 0.01 is generally recommended for smooth playback. <br> 
 
 If the axes extend beyond ±10 and the planets leave the visible frame, the system likely diverged due to scattering.  
 In that case, try reducing the total simulation time to observe earlier behavior before scattering occurs.
@@ -65,25 +65,25 @@ In that case, try reducing the total simulation time to observe earlier behavior
 ---
 
 ### Example Input — Mode 1
--0.97000436 0.24308753 0.4662036850 0.4323657300
-0.0 0.0 -0.93240737 -0.86473146
-0.97000436 -0.24308753 0.4662036850 0.4323657300
-1
-5
-0.0
-1.0
-2.0
-6.3259
-8.0
+-0.97000436 0.24308753 0.4662036850 0.4323657300<br>
+0.0 0.0 -0.93240737 -0.86473146<br>
+0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
+1<br>
+5<br>
+0.0<br>
+1.0<br>
+2.0<br>
+6.3259<br>
+8.0<br>
 
 ---
 
 ### Example Input — Mode 2
--0.97000436 0.24308753 0.4662036850 0.4323657300
-0.0 0.0 -0.93240737 -0.86473146
-0.97000436 -0.24308753 0.4662036850 0.4323657300
-2
-10.0 0.01
+-0.97000436 0.24308753 0.4662036850 0.4323657300<br>
+0.0 0.0 -0.93240737 -0.86473146<br>
+0.97000436 -0.24308753 0.4662036850 0.4323657300<br>
+2<br>
+10.0 0.01<br>
 
 
 ---
